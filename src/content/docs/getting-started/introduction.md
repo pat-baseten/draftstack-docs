@@ -1,25 +1,35 @@
 ---
 title: Introduction
-description: Learn what Draftstack is and how it helps you build great documentation.
+description: What DraftStack is and the problem it solves.
 ---
 
-Draftstack is a modern documentation site built with [Astro](https://astro.build) and [Starlight](https://starlight.astro.build). It gives you everything you need to create, maintain, and deploy developer documentation.
+DraftStack is an AI-powered knowledge sync engine. It monitors your codebases for merged pull requests, determines what knowledge needs to change, and generates updates across every connected source of truth — documentation repositories, Notion workspaces, Linear projects, and more.
 
-## Features
+## The problem
 
-- **Markdown and MDX** - Write content in standard Markdown with optional MDX components
-- **Built-in search** - Full-text search powered by Pagefind, no configuration needed
-- **Dark mode** - Automatic light/dark theme switching
-- **Responsive** - Works on all screen sizes out of the box
-- **Fast** - Zero client-side JavaScript by default, instant page loads
-- **Accessible** - WCAG-compliant with semantic HTML and keyboard navigation
-- **i18n ready** - Built-in internationalization support
-- **SEO optimized** - Automatic sitemaps, OpenGraph tags, and structured data
+Documentation falls out of date the moment code changes. Teams know this, but keeping docs in sync is manual, tedious, and easy to forget. The gap between what the code does and what the docs say grows wider with every merged PR.
 
-## How it works
+This problem extends beyond docs repos. When an API changes, the Notion runbook is wrong. When a feature ships, the Linear project description is stale. When a config format changes, the onboarding guide in Slack is misleading. Knowledge lives in many places. Code changes happen in one.
 
-Draftstack uses a file-based routing system. Every `.md` or `.mdx` file in the `src/content/docs/` directory becomes a page on your site. The sidebar navigation is configured in `astro.config.mjs`.
+## How DraftStack fixes it
 
-## Next steps
+DraftStack treats documentation as a downstream artifact of code. When a PR merges:
 
-Head to the [quickstart guide](/getting-started/quickstart/) to get your local development environment running.
+1. **Detect** — DraftStack analyzes the diff to understand what changed and why
+2. **Map** — It identifies which knowledge sources are affected: docs pages, Notion databases, Linear tickets, internal wikis
+3. **Draft** — An LLM pipeline generates suggested updates matched to your team's writing style
+4. **Review** — Suggestions land in your inbox with full context: the source PR, the reasoning, and a side-by-side diff
+5. **Sync** — Approve with one click and DraftStack pushes the changes — a draft PR to GitHub, a page update to Notion, a comment on Linear
+
+## Who it's for
+
+- **Developers** stop worrying about whether they remembered to update docs after merging
+- **Technical writers** shift from writing first drafts to editing and curating AI-generated suggestions
+- **Org admins** manage teams, configure integrations, and set up style guides
+- **Platform admins** monitor system health across organizations
+
+## What's next
+
+- [Quickstart](/getting-started/quickstart/) — connect your first repository in five minutes
+- [How it works](/getting-started/how-it-works/) — understand the pipeline architecture
+- [Knowledge sources](/concepts/knowledge-sources/) — see every destination DraftStack can sync to

@@ -1,63 +1,60 @@
 ---
 title: Quickstart
-description: Get Draftstack running locally in under two minutes.
+description: Connect your first repository and see DraftStack in action.
 ---
+
+Get DraftStack watching a repository and generating suggestions in under five minutes.
 
 ## Prerequisites
 
-- [Node.js](https://nodejs.org/) v20.17.0 or higher
-- A package manager (npm, pnpm, or yarn)
+- A GitHub account with access to at least one repository
+- A DraftStack account ([sign up here](https://draftstack.io))
 
-## Install dependencies
+## Step 1: Install the GitHub App
 
-```bash
-npm install
-```
+From your DraftStack dashboard, go to **Settings > Integrations > GitHub** and click **Install GitHub App**. Select the repositories you want DraftStack to monitor.
 
-## Start the dev server
+## Step 2: Connect a documentation target
 
-```bash
-npm run dev
-```
+Tell DraftStack where your documentation lives. This can be:
 
-Open [http://localhost:4321](http://localhost:4321) in your browser. Changes to any `.md` or `.mdx` file will hot-reload automatically.
+- A **GitHub repository** containing Markdown or MDX docs
+- A **Notion workspace** with technical documentation pages
+- A **Linear project** with specs and runbooks
 
-## Create a new page
+Go to **Settings > Knowledge sources** and add your first target.
 
-Add a Markdown file to `src/content/docs/`:
+## Step 3: Configure a project
 
-```markdown
----
-title: "My new page"
-description: "A short description for search and SEO."
----
+A project links a monitored code repository to one or more knowledge sources. Create one from **Projects > New project**:
 
-Your content here.
-```
+| Field | Example |
+|---|---|
+| Name | `api-service` |
+| Code repository | `org/api-service` |
+| Knowledge sources | `org/docs`, `Notion: API Runbooks` |
 
-Then add it to the sidebar in `astro.config.mjs`:
+## Step 4: Merge a PR
 
-```js
-sidebar: [
-  {
-    label: 'My Section',
-    items: [
-      { label: 'My New Page', slug: 'my-section/my-new-page' },
-    ],
-  },
-],
-```
+Merge any pull request in the monitored repository. Within a few minutes, DraftStack will:
 
-## Build for production
+1. Analyze the diff
+2. Determine if documentation changes are needed
+3. Generate suggestions for each affected knowledge source
+4. Deliver them to your **inbox**
 
-```bash
-npm run build
-```
+## Step 5: Review and approve
 
-The static output is written to `./dist/` and can be deployed to any static hosting provider.
+Open your inbox. Each suggestion includes:
 
-## Preview the production build
+- The source PR that triggered it
+- The reasoning behind the suggested change
+- A side-by-side diff showing exactly what will change
 
-```bash
-npm run preview
-```
+Click **Approve** to push the update, or **Edit** to refine it first.
+
+## What's next
+
+- [How it works](/getting-started/how-it-works/) — understand the full pipeline
+- [Knowledge sources](/concepts/knowledge-sources/) — connect Notion, Linear, and more
+- [Custom style guides](/integrations/style-guides/) — make DraftStack write like your team

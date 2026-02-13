@@ -1,6 +1,8 @@
-# Draftstack Docs
+# DraftStack Docs
 
-Documentation site for Draftstack, built with [Astro](https://astro.build) and [Starlight](https://starlight.astro.build).
+Documentation site for [DraftStack](https://draftstack.io) — the AI-powered knowledge sync engine that keeps every source of truth up to date with your code.
+
+Built with [Astro](https://astro.build) and [Starlight](https://starlight.astro.build).
 
 ## Local development
 
@@ -18,11 +20,3 @@ npm run build
 ```
 
 Static output is written to `./dist/`.
-
-## Project structure
-
-```
-src/content/docs/    # Documentation pages (Markdown / MDX)
-src/styles/          # Custom theme CSS
-astro.config.mjs     # Site and sidebar configuration
-```

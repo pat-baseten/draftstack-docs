@@ -1,73 +1,47 @@
 ---
 title: Configuration
-description: Complete reference for all configuration options.
+description: Reference for all project and pipeline configuration options.
 ---
 
-## Site configuration
+## Project configuration
 
-The site is configured in `astro.config.mjs`. The Starlight integration accepts the following options:
+Each DraftStack project links a code repository to one or more knowledge sources.
 
-### `title`
-
-**Type:** `string`
-
-The site title displayed in the header and browser tab.
-
-### `sidebar`
-
-**Type:** `SidebarItem[]`
-
-Defines the navigation sidebar. Each item is either a link or a group:
-
-```js
-sidebar: [
-  {
-    label: 'Section Name',
-    items: [
-      { label: 'Page Title', slug: 'section/page' },
-    ],
-  },
-  {
-    label: 'Auto Section',
-    autogenerate: { directory: 'auto-section' },
-  },
-],
-```
-
-### `social`
-
-**Type:** `SocialLink[]`
-
-Social links displayed in the site header.
-
-```js
-social: [
-  { icon: 'github', label: 'GitHub', href: 'https://github.com/...' },
-]
-```
-
-### `customCss`
-
-**Type:** `string[]`
-
-Paths to custom CSS files to load on every page.
-
-## Page frontmatter
-
-Every `.md` or `.mdx` file supports the following frontmatter fields:
+### Fields
 
 | Field | Type | Required | Description |
 |---|---|---|---|
-| `title` | `string` | Yes | Page title |
-| `description` | `string` | No | Short description for SEO and search |
-| `template` | `"doc" \| "splash"` | No | Page layout template |
-| `sidebar` | `object` | No | Override sidebar behavior for this page |
-| `tableOfContents` | `boolean \| object` | No | Configure or disable the table of contents |
-| `hero` | `object` | No | Hero section (splash pages only) |
+| `name` | string | Yes | Human-readable project name |
+| `code_repository` | string | Yes | GitHub repository in `owner/repo` format |
+| `trigger_branch` | string | No | Branch to watch for merges (default: `main`) |
+| `knowledge_sources` | array | Yes | List of connected knowledge sources |
+| `style_guide` | string | No | ID of the style guide to use for generation |
+| `team` | string | No | Team this project belongs to |
 
-## Environment variables
+### Knowledge source entry
 
-| Variable | Description |
-|---|---|
-| `SITE_URL` | Base URL for canonical links and sitemap |
-| `BASE_PATH` | Subpath if docs are not at the domain root |
+Each entry in `knowledge_sources` specifies a target:
+
+| Field | Type | Required | Description |
+|---|---|---|---|
+| `type` | string | Yes | `github`, `notion`, or `linear` |
+| `target` | string | Yes | Repository path, Notion page ID, or Linear project ID |
+| `mappings` | array | No | Code path to target mappings for more precise suggestions |
+
+### Mapping entry
+
+| Field | Type | Description |
+|---|---|---|
+| `code_pattern` | string | Glob pattern matching source files (e.g., `src/api/**`) |
+| `target_path` | string | Specific page or section in the knowledge source |
+
+## Pipeline configuration
+
+Pipeline behavior can be tuned per project.
+
+| Field | Type | Default | Description |
+|---|---|---|---|
+| `skip_patterns` | array | `[]` | File glob patterns to always skip (e.g., `*.test.ts`) |
+| `confidence_threshold` | number | `0.7` | Minimum confidence to generate a suggestion |
+| `auto_approve` | boolean | `false` | Automatically approve high-confidence suggestions |
+| `auto_approve_threshold` | number | `0.95` | Confidence required for auto-approval |
