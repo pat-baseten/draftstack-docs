@@ -1,0 +1,34 @@
+---
+title: Draftstack
+description: Ship production-ready documentation, fast.
+template: splash
+hero:
+  tagline: The modern documentation platform for developer teams. Write, build, and deploy beautiful docs in minutes.
+  actions:
+    - text: Get started
+      link: /getting-started/introduction/
+      icon: right-arrow
+    - text: View on GitHub
+      link: https://github.com/pat-baseten/draftstack-docs
+      icon: external
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+## Why Draftstack?
+
+<CardGrid stagger>
+	<Card title="Fast by default" icon="rocket">
+		Built on Astro and Starlight for zero-JS pages that load instantly. Your docs stay fast as they grow.
+	</Card>
+	<Card title="Write in Markdown" icon="pencil">
+		Author content in Markdown and MDX. Use built-in components for callouts, code groups, tabs, and more.
+	</Card>
+	<Card title="Full-text search" icon="magnifier">
+		Built-in search powered by Pagefind. No external services or API keys required.
+	</Card>
+	<Card title="Dark mode" icon="moon">
+		Automatic light and dark mode with full theme customization via CSS variables.
+	</Card>
+</CardGrid>
