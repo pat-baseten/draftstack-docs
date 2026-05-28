@@ -7,7 +7,7 @@ description: "Common DraftStack CLI commands."
 
 ## Authentication
 
-`draftstack auth login`: Opens a browser login flow and stores a local CLI token.
+`draftstack auth login`: Starts a browser-based login flow to authenticate the CLI. Use `--no-open` to prevent automatic browser opening and `--label` to name the token.
 
 `draftstack auth status`: Shows the active API URL and login state.
 
