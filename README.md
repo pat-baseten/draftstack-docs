@@ -28,5 +28,5 @@ The static site is written to `dist`.
 ## Host
 
 - Vercel: import this repository and keep the build command as `npm run build`.
-- GitHub Pages: publish the `dist` directory from a build workflow.
+- GitHub Pages: enable Pages with GitHub Actions as the source. The included workflow builds and deploys `dist`.
 - Static host: upload the contents of `dist`.
