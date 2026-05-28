@@ -8,6 +8,10 @@ export default defineConfig({
   integrations: [
     starlight({
       title: 'DraftStack',
+      favicon: '/favicon.svg',
+      head: [
+        { tag: 'meta', attrs: { name: 'theme-color', content: '#16a37f' } },
+      ],
       social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/pat-baseten/draftstack-docs' }],
       customCss: ['./src/styles/custom.css'],
       sidebar: [
@@ -17,6 +21,10 @@ export default defineConfig({
                   {
                         "label": "Introduction",
                         "slug": "getting-started/introduction"
+                  },
+                  {
+                        "label": "Installation",
+                        "slug": "getting-started/installation"
                   },
                   {
                         "label": "Quickstart",
@@ -46,6 +54,10 @@ export default defineConfig({
                   {
                         "label": "CLI and MCP",
                         "slug": "concepts/cli-and-mcp"
+                  },
+                  {
+                        "label": "Security",
+                        "slug": "concepts/security"
                   }
             ]
       },
@@ -78,12 +90,20 @@ export default defineConfig({
                         "slug": "reference/configuration"
                   },
                   {
+                        "label": "Troubleshooting",
+                        "slug": "reference/troubleshooting"
+                  },
+                  {
                         "label": "Deployment",
                         "slug": "reference/deployment"
                   },
                   {
                         "label": "Style guide",
                         "slug": "reference/style-guide"
+                  },
+                  {
+                        "label": "FAQ",
+                        "slug": "reference/faq"
                   }
             ]
       }
