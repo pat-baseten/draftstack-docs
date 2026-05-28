@@ -3,6 +3,8 @@ import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 
 export default defineConfig({
+  site: 'https://pat-baseten.github.io',
+  base: '/draftstack-docs',
   integrations: [
     starlight({
       title: 'DraftStack',
