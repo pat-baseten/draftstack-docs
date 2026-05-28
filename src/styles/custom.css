@@ -1,28 +1,28 @@
-/* Draftstack custom theme */
+/* DraftStack custom Starlight theme */
 :root {
-	--sl-color-accent-low: #1a1a2e;
-	--sl-color-accent: #6c63ff;
-	--sl-color-accent-high: #c4c1ff;
-	--sl-color-white: #ffffff;
-	--sl-color-gray-1: #eeeeee;
-	--sl-color-gray-2: #c2c2c2;
-	--sl-color-gray-3: #8b8b8b;
-	--sl-color-gray-4: #585858;
-	--sl-color-gray-5: #383838;
-	--sl-color-gray-6: #272727;
-	--sl-color-black: #141414;
+  --sl-color-accent-low: #12251f;
+  --sl-color-accent: #16a37f;
+  --sl-color-accent-high: #b8f3df;
+  --sl-color-white: #ffffff;
+  --sl-color-gray-1: #f4f2ee;
+  --sl-color-gray-2: #d8d2c8;
+  --sl-color-gray-3: #aaa49a;
+  --sl-color-gray-4: #6f6a62;
+  --sl-color-gray-5: #3f3c37;
+  --sl-color-gray-6: #27241f;
+  --sl-color-black: #151411;
 }
 
 :root[data-theme='light'] {
-	--sl-color-accent-low: #e8e6ff;
-	--sl-color-accent: #6c63ff;
-	--sl-color-accent-high: #2d2580;
-	--sl-color-white: #141414;
-	--sl-color-gray-1: #383838;
-	--sl-color-gray-2: #585858;
-	--sl-color-gray-3: #8b8b8b;
-	--sl-color-gray-4: #c2c2c2;
-	--sl-color-gray-5: #eeeeee;
-	--sl-color-gray-6: #f6f6f6;
-	--sl-color-black: #ffffff;
+  --sl-color-accent-low: #dff7ee;
+  --sl-color-accent: #0c8062;
+  --sl-color-accent-high: #064536;
+  --sl-color-white: #151411;
+  --sl-color-gray-1: #27241f;
+  --sl-color-gray-2: #4f4a43;
+  --sl-color-gray-3: #7a746a;
+  --sl-color-gray-4: #c7bfb3;
+  --sl-color-gray-5: #eee9df;
+  --sl-color-gray-6: #f8f5ef;
+  --sl-color-black: #ffffff;
 }
