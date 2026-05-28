@@ -10,3 +10,38 @@ DraftStack exposes token-authenticated routes under `/api/v1`.
 Send `Authorization: Bearer dst_...` with each request.
 
 Use the API for projects, repositories, setup, suggestions, and tokens.
+
+## Setup
+
+### GET /api/v1/setup/github/install-url
+
+Returns the GitHub App installation URL for the organization.
+
+**Scope:** `setup:write`
+
+**Response**
+
+```json
+{
+  "installUrl": "https://github.com/apps/draftstack/installations/select_target"
+}
+```
+
+### GET /api/v1/setup/github/status
+
+Returns the GitHub setup status for the authenticated user's organization.
+
+**Scope:** `setup:write`
+
+**Response**
+
+```json
+{
+  "hasOrganization": true,
+  "organization": {
+    "id": "org-1",
+    "githubOrgSlug": "acme",
+    "plan": "TEAM"
+  }
+}
+```
