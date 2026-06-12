@@ -9,7 +9,11 @@ Webhooks only cover changes DraftStack sees. A missed delivery, a repository add
 
 Scheduled audits close that gap. When audits are enabled for a project, DraftStack sweeps each monitored repository once a day, collects the default-branch commits since the last sweep, and runs them through the same analysis, generation, and review pipeline as a merged pull request.
 
-Audit suggestions appear in the inbox with an `Audit:` title and a compare link for the commit window. The project confidence threshold and publish mode apply unchanged, so a project with publish mode `auto` repairs its docs without a human in the loop, while `draft` and `none` projects keep normal review.
+Audit suggestions appear in the inbox with an `Audit:` title and a compare link for the commit window. The project confidence threshold and publish mode apply unchanged.
+
+## Auto-approval
+
+Projects can also set an auto-approval threshold. Suggestions whose confidence meets or exceeds it publish immediately under the project's publish mode, with no human reviewer: combined with publish mode `auto`, the loop repairs docs end to end on its own. A publish failure leaves the suggestion pending for normal review. Auto-approval is off until a threshold is set, and reviewers can read every automatic publication in the activity log.
 
 ## Learning from dismissals
 
