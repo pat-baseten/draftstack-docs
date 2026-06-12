@@ -7,7 +7,7 @@ description: "Common questions about DraftStack."
 
 ## Does DraftStack publish docs automatically?
 
-No. DraftStack creates suggestions for review. Approving a suggestion opens a draft GitHub pull request in the documentation repository.
+By default, no. DraftStack creates suggestions for review, and approving a suggestion opens a draft GitHub pull request in the documentation repository. Approval can optionally merge the pull request immediately with `--pr-mode auto`, which teams use to build hands-off pipelines.
 
 ## Which repositories does DraftStack change?
 

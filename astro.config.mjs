@@ -56,6 +56,10 @@ export default defineConfig({
                         "slug": "concepts/cli-and-mcp"
                   },
                   {
+                        "label": "Scheduled audits",
+                        "slug": "concepts/scheduled-audits"
+                  },
+                  {
                         "label": "Security",
                         "slug": "concepts/security"
                   }

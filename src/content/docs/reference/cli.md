@@ -30,3 +30,7 @@ description: "Common DraftStack CLI commands."
 `draftstack suggestions list --project <project-id> --output json`: Lists suggestions for review.
 
 `draftstack suggestions approve <suggestion-id> --output json`: Creates a draft GitHub pull request from an approved suggestion.
+
+`draftstack suggestions approve <suggestion-id> --pr-mode auto`: Controls how the approval is published. Use `draft` for a draft pull request (the default), `auto` to open a pull request and merge it immediately, or `none` to commit a branch without opening a pull request.
+
+`draftstack projects pr-mode set <project-id> auto`: Sets the default publish mode for a project so approvals do not need the flag. Use `inherit` to clear it. The mode resolves most specific first: the per-call flag, then the project, team, and organization defaults, then `draft`.
