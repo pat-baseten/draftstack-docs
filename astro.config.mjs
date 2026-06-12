@@ -60,6 +60,10 @@ export default defineConfig({
                         "slug": "concepts/scheduled-audits"
                   },
                   {
+                        "label": "Page anchors",
+                        "slug": "concepts/page-anchors"
+                  },
+                  {
                         "label": "Security",
                         "slug": "concepts/security"
                   }
