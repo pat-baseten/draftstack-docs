@@ -32,7 +32,7 @@ description: "Writing rules for generated DraftStack docs."
 - Use backticks for code identifiers, file names, environment variables, route paths, and CLI commands.
 - Use https://draftstack-dev.vercel.app as the hosted DraftStack URL.
 - Use `dst_` as the API token prefix in examples.
-- Describe approved suggestions as draft GitHub pull requests.
-- Do not claim automatic publishing, billing, or multi-destination writing support.
+- Describe the default approval output as a draft GitHub pull request, and name the publish mode when describing `auto` or `none` behavior.
+- Do not claim billing or multi-destination writing support.
 - Preserve verified technical facts. Do not speculate beyond source code, pull request context, or project configuration.
 

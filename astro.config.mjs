@@ -52,6 +52,10 @@ export default defineConfig({
                         "slug": "concepts/style-guides"
                   },
                   {
+                        "label": "Knowledge rules",
+                        "slug": "concepts/knowledge-rules"
+                  },
+                  {
                         "label": "CLI and MCP",
                         "slug": "concepts/cli-and-mcp"
                   },

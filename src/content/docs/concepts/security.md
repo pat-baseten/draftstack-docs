@@ -17,8 +17,8 @@ Treat tokens as secrets. Store them in environment variables or a secret manager
 
 ## GitHub App scope
 
-The GitHub App reads pull request metadata and diffs from the repositories you select. It writes only to the documentation repository, and only as a draft pull request.
+The GitHub App reads pull request metadata and diffs from the repositories you select. It writes only to the documentation repository, never to monitored source repositories.
 
-## What DraftStack does not do
+## Publishing control
 
-DraftStack does not publish documentation automatically. A reviewer approves a suggestion first, then DraftStack opens a draft GitHub pull request. DraftStack does not write to monitored source repositories.
+Every write to the documentation repository starts from an approval. The publish mode controls what an approval produces: a draft pull request by default, an immediately merged pull request with `auto`, or a branch with no pull request with `none`. Projects that keep the default mode always have a human review gate before anything merges.

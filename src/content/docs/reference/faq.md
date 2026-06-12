@@ -15,7 +15,7 @@ DraftStack writes only to the documentation repository. It reads from the monito
 
 ## What triggers a suggestion?
 
-A merged pull request on a monitored repository. DraftStack inspects the diff and drafts a focused documentation update when the change affects readers.
+Most suggestions come from merged pull requests on monitored repositories. DraftStack also analyzes direct pushes to branches, manual requests, backfilled history, and scheduled audit sweeps. Every source runs through the same analysis, so a suggestion only appears when the change affects readers.
 
 ## Can I use DraftStack from the terminal?
 

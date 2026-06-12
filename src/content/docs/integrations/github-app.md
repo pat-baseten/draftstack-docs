@@ -7,6 +7,6 @@ description: "How DraftStack reads source changes and opens docs pull requests."
 
 The GitHub App gives DraftStack scoped access to selected repositories.
 
-DraftStack reads pull request metadata and diffs from monitored repositories.
+DraftStack reads pull request metadata, diffs, and branch commits from monitored repositories.
 
-When a suggestion is approved, DraftStack writes a branch and draft pull request to the documentation repository.
+When a suggestion is approved, DraftStack writes a branch to the documentation repository and, depending on the publish mode, opens a draft pull request, opens and merges a pull request, or stops at the branch.
